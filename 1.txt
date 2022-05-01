@@ -1,0 +1,5 @@
+SELECT `users`.`name`
+FROM `users`
+LEFT JOIN `orders` ON (`orders`.user_id = `users`.id)
+WHERE `orders`.`id` IS NOT NULL
+GROUP BY `users`.`id`
